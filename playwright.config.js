@@ -40,8 +40,8 @@ const config = {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     actionTimeout: 0,
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'https://modelling-staging.axa-rev-preprod-mpl-int.merlot.eu-central-1.aws.openpaas.axa-cloud.com/auth/login',
-    //baseURL: 'https://productmodeler-uat.axa.com/',
+    //baseURL: 'https://modelling-staging.axa-rev-preprod-mpl-int.merlot.eu-central-1.aws.openpaas.axa-cloud.com/auth/login',
+    baseURL: 'https://productmodeler-uat.axa.com/',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',

@@ -5,10 +5,10 @@ export class Navigation{
         this.page = page
         this.downloadmenu = page.locator('[id="__BVID__50__BV_toggle_"]')
         this.downaloadexcel = page.getByRole('menuitem', { name: ' Download as Excel' })
-        this.sandboxLink = page.locator('[id="__BVID__19"]')// tenant for stagging
+        this.sandboxLink = page.locator('[id="__BVID__16"]')// tenant for stagging
         this.sortDropdown = page.locator('[class="select-tenant py-0 custom-select"]')
         this.mainPage = page.getByRole('link', { name: 'Shared properties' })
-        this.profilemenu = page.getByRole('button', { name: 'LAB' });
+        this.profilemenu = page.getByRole('button', { name: 'juan.lopez.external@axa.com' });
         this.logout = page.getByText('Log out');
         this.selectProduct = page.getByRole('link', { name: 'Innoplus 2021', exact: true })
         this.overviewMenu =  page.getByRole('link', { name: 'Overview' })
@@ -24,7 +24,7 @@ export class Navigation{
         await this.sandboxLink.waitFor()
         await this.sandboxLink.click()
         console.log(this.sandboxLink)
-        await this.page.locator('[id="__BVID__19"]').selectOption('qa-automation'); // tenant_id stagging
+        await this.page.locator('[id="__BVID__16"]').selectOption('qa-automation'); // tenant_id stagging
     }
 
     goToR3Tenant = async () =>{
