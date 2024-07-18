@@ -5,7 +5,7 @@ export class Navigation{
         this.page = page
         this.downloadmenu = page.locator('[id="__BVID__50__BV_toggle_"]')
         this.downaloadexcel = page.getByRole('menuitem', { name: ' Download as Excel' })
-        this.sandboxLink = page.locator('[id="__BVID__19"]')// tenant for stagging
+        this.sandboxLink = page.locator('[id="__BVID__16"]')// tenant for stagging
         this.sortDropdown = page.locator('[class="select-tenant py-0 custom-select"]')
         this.mainPage = page.getByRole('link', { name: 'Shared properties' })
         this.profilemenu = page.getByRole('button', { name: 'LAB' });
