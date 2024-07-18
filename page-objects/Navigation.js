@@ -8,7 +8,7 @@ export class Navigation{
         this.sandboxLink = page.locator('[id="__BVID__16"]')// tenant for stagging
         this.sortDropdown = page.locator('[class="select-tenant py-0 custom-select"]')
         this.mainPage = page.getByRole('link', { name: 'Shared properties' })
-        this.profilemenu = page.getByRole('button', { name: 'LAB' });
+        this.profilemenu = page.getByRole('button', { name: 'juan.lopez.external@axa.com' });
         this.logout = page.getByText('Log out');
         this.selectProduct = page.getByRole('link', { name: 'Innoplus 2021', exact: true })
         this.overviewMenu =  page.getByRole('link', { name: 'Overview' })
