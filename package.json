@@ -16,9 +16,7 @@
     "k6": "^0.0.0"
   },
   "dependencies": {
-    "brew": "^0.0.8",
     "dotenv": "^16.4.5",
-    "homebrew": "^0.1.0",
     "node": "^21.7.1",
     "node-fetch": "^2.6.7",
     "playwright": "^1.42.1",
