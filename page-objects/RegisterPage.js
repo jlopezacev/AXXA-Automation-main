@@ -18,7 +18,7 @@ export class RegisterPage{
         await this.page.goto("/")
     }
 
-    signUpAsNewUser = async (username, password, ) => {
+    signUpAsNewUser = async (useruatInput, passwordInputuat, ) => {
         await this.useruatInput.waitFor()
         await this.useruatInput.fill(useruatInput)
         await this.loginButtonuat.waitFor()
