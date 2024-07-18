@@ -10,7 +10,7 @@ test('0001 - login-select-tenant-logout', async ({page}) =>{
     await registerPage.visit();
     const username = adminDetails.username
     const password = adminDetails.password
-    await registerPage.signUpAsNewUser(useruatInput, passwordInputuat)
+    await registerPage.signUpAsNewUser(username, password)
 
     const navigation = new Navigation(page)
     await navigation.goToSandox()
