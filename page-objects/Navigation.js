@@ -24,7 +24,7 @@ export class Navigation{
         await this.sandboxLink.waitFor()
         await this.sandboxLink.click()
         console.log(this.sandboxLink)
-        await this.page.locator('[id="__BVID__19"]').selectOption('qa-automation'); // tenant_id stagging
+        await this.page.locator('[id="__BVID__16"]').selectOption('qa-automation'); // tenant_id stagging
     }
 
     goToR3Tenant = async () =>{
