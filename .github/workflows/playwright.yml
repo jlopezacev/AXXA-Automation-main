@@ -1,0 +1,23 @@
+name: axa_automation
+on: 
+  push:
+    branches:
+      [ main ]
+jobs:
+  playwrighttest:
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.41.2-focal
+      env:
+        ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Run Tests
+        run: |
+          echo "Start Testing AT"
+          chmod +x ./shopping-store-linux-amd64 && ./shopping-store-linux-amd64 &
+          echo "Install dependencies from lockfile"
+          npm ci --silent
+          echo "Run playwrite tests"
+          npm run test:ci
