@@ -19,22 +19,22 @@ export class RegisterPage{
     }
 
     signUpAsNewUser = async (useruatInput, passwordInputuat, ) => {
-        await this.page.pause()
         await this.useruatInput.waitFor()
         await this.useruatInput.fill(useruatInput)
         await this.loginButtonuat.waitFor()
         await this.loginButtonuat.click()
+        await this.page.pause()
         await this.passwordScreenuat.waitFor()
         await this.passwordInputuat.waitFor()
         await this.passwordInputuat.fill(passwordInputuat)
         await this.loginButtonuat.waitFor()
         await this.loginButtonuat.click()
-          
-        // await this.usernameInput.waitFor()
-        // await this.usernameInput.fill(username)
-        // await this.passwordInput.waitFor()
-        // await this.passwordInput.fill(password)
-        // await this.loginButton.waitFor()
-        // await this.loginButton.click()
+          //*staging logging*//
+        //await this.usernameInput.waitFor()
+        //await this.usernameInput.fill(username)
+        //await this.passwordInput.waitFor()
+        //await this.passwordInput.fill(password)
+        //await this.loginButton.waitFor()
+        //await this.loginButton.click()
     }
 }
