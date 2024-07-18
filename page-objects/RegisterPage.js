@@ -23,6 +23,7 @@ export class RegisterPage{
         await this.useruatInput.fill(useruatInput)
         await this.loginButtonuat.waitFor()
         await this.loginButtonuat.click()
+        await this.page.pause()
         await this.passwordScreenuat.waitFor()
         await this.passwordInputuat.waitFor()
         await this.passwordInputuat.fill(passwordInputuat)
