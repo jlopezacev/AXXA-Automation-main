@@ -13,10 +13,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm ci --silent --verbose
       - name: Run Tests
         run: |
           echo "Start Testing AT"
           echo "Install dependencies from lockfile"
-          npm ci --silent
           echo "Run playwrite tests"
           npm run test:ci --verbose  # Add --verbose flag to see more details
