@@ -17,5 +17,4 @@ jobs:
           echo "Install dependencies from lockfile"
           npm ci --silent
           echo "Run playwrite tests"
-          npm run test:ci
           npm run test:ci --verbose  # Add --verbose flag to see more details
