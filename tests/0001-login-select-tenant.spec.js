@@ -1,4 +1,5 @@
 import * as dotenv from "dotenv"
+import { expect } from "@playwright/test"
 dotenv.config()
 import {test} from "@playwright/test"
 import { Navigation } from "../page-objects/Navigation.js"
