@@ -6,20 +6,25 @@ import { Navigation } from "../page-objects/Navigation.js"
 import { expect } from "@playwright/test"
 import { RegisterPage } from "../page-objects/RegisterPage.js";
 // @ts-ignore
-import { adminDetails, userDetails} from "../data/userDetails.js";
+import { adminDetails } from "../data/userDetails.js";
 import { CreateProducts } from "../page-objects/CreateProducts.js"
 import { productsDetail } from "../data/productsDetail.js"
 
 
+
 test.describe.serial('Authoring Tool Smoke Tests', () => {
-  let registerPage;
+  
+  const adminDetails = {
+    username: "juan.lopez.external@axa.com",
+    password: process.env.ADMIN_PASSWORD
+  };
 
   test.beforeEach(async ({ page }) => {
-    registerPage = new RegisterPage(page);
+    const registerPage = new RegisterPage(page);
     await registerPage.visit();
-    const username = adminDetails.username;
-    const password = adminDetails.password;
-    await registerPage.signUpAsNewUser(username, password);
+    console.log('Admin username:', adminDetails.username);
+    console.log('Admin password:', adminDetails.password);
+    await registerPage.signUpAsNewUser(adminDetails.username, adminDetails.password);
   });
 
 test.skip('1: homepage has title and link to Role page', async ({ page }) => {
