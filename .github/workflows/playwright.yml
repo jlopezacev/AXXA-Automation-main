@@ -21,3 +21,5 @@ jobs:
           echo "Install dependencies from lockfile"
           echo "Run playwrite tests"
           npm run test:ci --verbose  # Add --verbose flag to see more details
+          env:
+            PASSWORD_INPUT_UAT: ${{ secrets.PASSWORD_INPUT_UAT }}
