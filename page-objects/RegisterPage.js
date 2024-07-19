@@ -25,6 +25,7 @@ export class RegisterPage{
         await this.loginButtonuat.click()
         await this.passwordScreenuat.waitFor()
         await this.passwordInputuat.waitFor()
+        console.log('passwordInputuat value:', passwordInputuat);
         await this.passwordInputuat.fill(passwordInputuat)
         await this.loginButtonuat.waitFor()
         await this.loginButtonuat.click()
