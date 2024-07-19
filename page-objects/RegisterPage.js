@@ -18,15 +18,17 @@ export class RegisterPage{
         await this.page.goto("/")
     }
 
-    signUpAsNewUser = async (useruatInput, passwordInputuat, ) => {
+    signUpAsNewUser = async (username, password, ) => {
+        console.log('useruatInput:', username);  // Debugging line
+        console.log('passwordInputuat:', password);
         await this.useruatInput.waitFor()
-        await this.useruatInput.fill(useruatInput)
+        await this.useruatInput.fill(username)
         await this.loginButtonuat.waitFor()
         await this.loginButtonuat.click()
         await this.passwordScreenuat.waitFor()
         await this.passwordInputuat.waitFor()
-        console.log('passwordInputuat value:', passwordInputuat);
-        await this.passwordInputuat.fill(passwordInputuat)
+        console.log('passwordInputuat value:', password);
+        await this.passwordInputuat.fill(password)
         await this.loginButtonuat.waitFor()
         await this.loginButtonuat.click()
           //*staging logging*//
